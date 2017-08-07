@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="bool"
+            type="Boolean"/>
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="io.almayce.dev.radiobolid.MainActivity">
+
+        <ImageView
+            android:src="@drawable/fond"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/headphones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            app:layout_heightPercent="80%">
+
+            <ImageView
+                app:layout_marginTopPercent="5%"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/ivLogo"
+                android:src="@drawable/logo_bolid"
+                app:layout_widthPercent="70%"
+                app:layout_heightPercent="30%" />
+
+            <io.almayce.dev.radiobolid.CustomTextView
+                android:textSize="44dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="это\nне\nпросто\nрадио"
+                android:layout_below="@+id/ivLogo"
+                app:layout_widthPercent="70%"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                />
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_above="@+id/llButtons"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:text="3G"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+
+                <TextView
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:text="WIFI / LTE / 4G"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llButtons"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                app:layout_heightPercent="10%">
+
+                <ImageView
+                    android:layout_margin="6dp"
+                    android:background="@drawable/back_btn"
+                    android:layout_weight="1"
+                    android:id="@+id/playStop64"
+                    android:onClick="onPlayStopClick64"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_stop_black_24dp"
+                    android:layout_height="match_parent"
+                    app:layout_marginTopPercent="55%"
+                    android:layout_width="match_parent" />
+
+                <ImageView
+                    android:layout_margin="6dp"
+                    android:background="@drawable/back_btn"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/playStop128"
+                    android:onClick="onPlayStopClick128"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_stop_black_24dp"
+                    app:layout_marginTopPercent="55%"
+                    />
+
+            </LinearLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>
+
